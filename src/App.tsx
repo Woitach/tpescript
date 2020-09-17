@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import Searchh from './Serching/Search.jsx';
+import Data from './Data/Data.jsx';
 
 function App() {
   return (
     <div className="App">
-        <Searchh/>
+        <Data/>
     </div>
   );
 }
