@@ -17,10 +17,8 @@ const Data = ({ SearchingUser }) => {
     axios
       .get(link)
       .then((res) => {
-        //console.log(res);
         setUsers(res.data);
       }).catch((err) => {
-        //console.log(err);
       })
   });
   return (
@@ -28,12 +26,12 @@ const Data = ({ SearchingUser }) => {
       <ol className="list">
         {filteredUser.map((user) => (
           <li key={user.name}>
-            <n class="text">
+            <div class="text">
               {user.name}
-            </n>
-            <n>
+            </div>
+            <div>
               @{user.username}
-            </n>
+            </div>
           </li>
         ))}
       </ol>
