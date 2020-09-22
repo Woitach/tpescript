@@ -13,8 +13,10 @@
     "axios": "^0.20.0",
     "mysql": "^2.18.1",
     "react": "^16.13.1",
+    "react-debounce-input": "^3.2.2",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",
+    "save": "^2.4.0",
     "typescript": "^3.7.5"
   },
   "scripts": {
