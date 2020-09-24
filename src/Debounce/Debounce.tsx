@@ -1,11 +1,18 @@
-import axios from 'axios';
 import React, { useState } from 'react';
-import './Search.css';
-import List from "../List/List";
+import './Debounce.css';
 import {DebounceInput} from 'react-debounce-input';
+import LoadData from '../LoadData/LoadData';
 
-const Debounce = () => {
-    const [SearchUser, SetSearchUser] = useState("");
+type Props = {
+    searching: string;
+}
+type User = {
+    name: string;
+    username: string;
+}
+
+const Debounce: React.FC<Props> = ({searching}) => {
+    const [UserName, SetSearchUser] = useState<User["name"]>();
     return (
         <div>
             <p className="Headtext">
@@ -14,12 +21,11 @@ const Debounce = () => {
             <DebounceInput
                 onChange={(e) => SetSearchUser(e.target.value)}
                 element="Input"
-                minLenght={1}
+                minLenght={2}
                 debounceTimeout={300}
                 className="inputfield"
                 placeholder="Search by user name..."
-                />
-            <List SearchingUserName={SearchUser}/>
+            />
         </div>
     );
 }

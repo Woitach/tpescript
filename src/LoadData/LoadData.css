@@ -1,0 +1,18 @@
+.headtext{
+  font-size: 30px;
+}
+.list{
+  font-family: Microsoft Sans Serif;
+  list-style-type:numeric;
+  color: rgb(192, 192, 192);
+}
+.listdiv{
+  margin: auto;
+  width: 30%;
+  text-align: left;
+}
+.text{
+  font-family: Microsoft Sans Serif;
+  color:black;
+  margin: 10px
+}

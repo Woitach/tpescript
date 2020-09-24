@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
-import Search from './Debounce/Debounce'
+import Mainn from './Main/Main'
 
 
 
 function App() {
   return (
     <div className="App">
-        <Search />
+        <Mainn />
     </div>
   );
 }
