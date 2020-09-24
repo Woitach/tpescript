@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
-import './Data.css';
+import './List.css';
 
 type Searching = {
   SearchingUserName: string;
@@ -9,7 +9,7 @@ type User = {
   name: string;
   username: string;
 }
-const Data: React.FC<Searching> = ({ SearchingUserName }) => {
+const List: React.FC<Searching> = ({ SearchingUserName }) => {
   const [users, setUsers] = useState([]);
   const [filteredUser, setFilteredUsers] = useState([]);
   const link = "https://jsonplaceholder.typicode.com/users";
@@ -47,4 +47,4 @@ const Data: React.FC<Searching> = ({ SearchingUserName }) => {
 
 }
 
-export default Data;
+export default List;

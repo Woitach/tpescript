@@ -1,10 +1,10 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import './Search.css';
-import Data from "../Data/Data";
+import List from "../List/List";
 import {DebounceInput} from 'react-debounce-input';
 
-const Search = () => {
+const Debounce = () => {
     const [SearchUser, SetSearchUser] = useState("");
     return (
         <div>
@@ -19,9 +19,9 @@ const Search = () => {
                 className="inputfield"
                 placeholder="Search by user name..."
                 />
-            <Data SearchingUserName={SearchUser}/>
+            <List SearchingUserName={SearchUser}/>
         </div>
     );
 }
 
-export default Search;
+export default Debounce;
