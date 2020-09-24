@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import './Search.css';
-import Data from "../Data/Data.jsx";
+import Data from "../Data/Data";
 import {DebounceInput} from 'react-debounce-input';
 
 const Search = () => {
@@ -19,7 +19,7 @@ const Search = () => {
                 className="inputfield"
                 placeholder="Search by user name..."
                 />
-            <Data SearchingUser={SearchUser}/>
+            <Data SearchingUserName={SearchUser}/>
         </div>
     );
 }
