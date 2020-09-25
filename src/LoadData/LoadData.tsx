@@ -11,7 +11,7 @@ type User = {
   username: string;
 }
 const LoadData: React.FC<Props> = ({searching,filtered}) => {
-  let [users, setUsers] = useState([]);
+  const [users, setUsers] = useState([]);
   const link = "https://jsonplaceholder.typicode.com/users";
   useEffect(() => {
     filtered(

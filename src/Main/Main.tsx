@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { useState } from 'react';
 import LoadData from '../LoadData/LoadData';
 import List from '../List/List';
 import Debounce from '../Debounce/Debounce';
