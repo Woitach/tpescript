@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './List.css';
 
 type Props = {
@@ -12,13 +12,13 @@ const List: React.FC<Props> = ({filtered}) => {
   return (
     <div className="listdiv">
       <ol className="list">
-        {filtered.map((user:User) => (
-          <li key={user.name}>
+        {filtered.map((User) => (
+          <li key={User.name}>
             <div className="text">
-              {user.name}
+              {User.name}
             </div>
             <div>
-              @{user.username}
+              @{User.username}
             </div>
           </li>
         ))}
