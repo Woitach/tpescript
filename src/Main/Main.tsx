@@ -3,15 +3,19 @@ import LoadData from '../LoadData/LoadData';
 import List from '../List/List';
 import Debounce from '../Debounce/Debounce';
 
-type Props = {
-    searching: string;
-}
+type User = {
+    name: string;
+    username: string;
+  }
+
 const Main: React.FC = () => {
-    const [userName,SetUserName] = useState("");
-    console.log(userName);
+    const [UserName, SetSearchUser] = useState("");
+    const [filteredUser, setFilteredUsers] = useState<User[]>([]);
     return (
         <div>
-            <Debounce searching={userName}/>
+            <Debounce onchange={SetSearchUser}/>
+            <LoadData searching={UserName} filtered={setFilteredUsers}/>
+            <List filtered={filteredUser}/>
         </div>
     );
 }

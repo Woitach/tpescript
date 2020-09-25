@@ -6,18 +6,17 @@ import Debounce from '../Debounce/Debounce';
 
 type Props = {
   searching:string;
-  filtered:Array<User>;
+  filtered: Function;
 }
 type User = {
   name: string;
   username: string;
 }
-const LoadData: React.FC<Props> = ({searching, filtered}) => {
-  const [users, setUsers] = useState([]);
-  const [filteredUser, setFilteredUsers] = useState<User[]>([]);
+const LoadData: React.FC<Props> = ({searching,filtered}) => {
+  let [users, setUsers] = useState([]);
   const link = "https://jsonplaceholder.typicode.com/users";
   useEffect(() => {
-    setFilteredUsers(
+    filtered(
       users.filter((user: User) =>
         user.name.toLowerCase().includes(searching.toLowerCase())
       )
@@ -34,6 +33,7 @@ const LoadData: React.FC<Props> = ({searching, filtered}) => {
   console.log(searching);
   return (
     <div>
+       
     </div>
   );
 

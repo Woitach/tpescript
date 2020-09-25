@@ -4,22 +4,16 @@ import {DebounceInput} from 'react-debounce-input';
 import LoadData from '../LoadData/LoadData';
 
 type Props = {
-    searching: string;
+    onchange: Function;
 }
-type User = {
-    name: string;
-    username: string;
-}
-
-const Debounce: React.FC<Props> = ({searching}) => {
-    const [UserName, SetSearchUser] = useState<User["name"]>();
+const Debounce: React.FC<Props> = ({onchange}) => {
     return (
         <div>
             <p className="Headtext">
                 Users list
             </p>
             <DebounceInput
-                onChange={(e) => SetSearchUser(e.target.value)}
+                onChange={(e) => onchange(e.target.value)}
                 element="Input"
                 minLenght={2}
                 debounceTimeout={300}

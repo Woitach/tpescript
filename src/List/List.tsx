@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import './List.css';
 
 type Props = {
-  Searching:string;
   filtered:Array<User>;
 }
 type User = {
