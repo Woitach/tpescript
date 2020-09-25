@@ -1,8 +1,6 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import './LoadData.css';
-import Debounce from '../Debounce/Debounce';
-
 
 type Props = {
   searching:string;

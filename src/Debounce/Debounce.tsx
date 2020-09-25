@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Debounce.css';
 import {DebounceInput} from 'react-debounce-input';
-import LoadData from '../LoadData/LoadData';
 
 type Props = {
     onchange: Function;
