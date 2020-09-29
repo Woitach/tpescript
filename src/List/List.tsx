@@ -1,5 +1,7 @@
 import React from 'react';
 import './List.css';
+import { Informations } from '../Context/Context';
+
 
 type Props = {
   filtered:Array<User>;
@@ -9,6 +11,7 @@ type User = {
   username: string;
 }
 const List: React.FC<Props> = ({filtered}) => {
+  filtered = Informations.filteredUser;
   return (
     <div className="listdiv">
       <ol className="list">

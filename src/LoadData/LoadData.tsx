@@ -1,6 +1,8 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import './LoadData.css';
+import { Informations } from '../Context/Context';
+
 
 type Props = {
   searching:string;
@@ -12,9 +14,12 @@ type User = {
 }
 const LoadData: React.FC<Props> = ({searching,filtered}) => {
   const [users, setUsers] = useState([]);
+  const [filteredUser, setFilteredUsers] = useState<User[]>([]);
+  Informations.UserName = searching;
+  Informations.filteredUser = filteredUser;
   const link = "https://jsonplaceholder.typicode.com/users";
   useEffect(() => {
-    filtered(
+    setFilteredUsers(
       users.filter((user: User) =>
         user.name.toLowerCase().includes(searching.toLowerCase())
       )
